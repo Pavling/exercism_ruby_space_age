@@ -1,5 +1,5 @@
 class SpaceAge
-  $PLANET_YEAR_RATIOS = {
+  PLANET_YEAR_RATIOS = {
     earth: 1.0,
     mercury: 0.2408467,
     venus: 0.61519726 ,
@@ -10,7 +10,7 @@ class SpaceAge
     neptune: 164.79132,
   }
 
-  $EARTH_YEAR_SECONDS = 31557600.0
+  EARTH_YEAR_SECONDS = 31557600.0
 
   attr_reader :seconds
 
@@ -37,7 +37,7 @@ class SpaceAge
 
   private
   def planet_year_length_in_seconds(planet)
-    $PLANET_YEAR_RATIOS[planet.intern] * $EARTH_YEAR_SECONDS
+    PLANET_YEAR_RATIOS[planet.intern] * EARTH_YEAR_SECONDS
   end
 
 end
